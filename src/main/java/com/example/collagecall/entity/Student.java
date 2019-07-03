@@ -3,15 +3,16 @@ package com.example.collagecall.entity;
 import lombok.Data;
 
 @Data
+/*
+将学生实例化
+ */
 public class Student {
+
     int studentid;
-    String studentweichat;
-    String studentname;
-    String studentphone;
-    String studentschool;
-    String studentnumber;
-    int studentintegral;
-    String studentsex;
-    String studentmajor;
-    String studentgrade;
+    String openid;
+    String name;
+    String phone;
+    String school;
+    String sno;
+    String sex;
 }
