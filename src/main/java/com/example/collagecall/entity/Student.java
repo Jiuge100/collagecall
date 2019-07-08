@@ -8,7 +8,7 @@ import lombok.Data;
  */
 public class Student {
 
-    int studentid;
+    String studentid;
     String openid;
     String name;
     String phone;

@@ -3,6 +3,7 @@ package com.example.collagecall.controller;
 import com.example.collagecall.dao.OrderDao;
 
 import com.example.collagecall.entity.Orders;
+import com.example.collagecall.utils.CollegeJSONResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,10 +16,11 @@ import java.util.List;
 public class OrderController {
     @Autowired
     OrderDao orderDao;
+
     @GetMapping("/allorder")
-    public List<Orders> allorder(){
+    public CollegeJSONResult allorder(){
         List<Orders> list = orderDao.selectList(null);
-        return list;
+        return CollegeJSONResult.ok(list);
     }
     @GetMapping("/addorder")
     public void addorder(@RequestParam("openid") String openid,@RequestParam("total") int total,

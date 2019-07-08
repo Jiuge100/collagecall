@@ -7,7 +7,7 @@ import lombok.Data;
 将商品实例化
  */
 public class Goods {
-    int goodid;
+    String goodid;
     String name;
     String introduce;
     String type;

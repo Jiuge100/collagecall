@@ -4,3 +4,5 @@ spring:
     #username: root
     #password: 123456
     url: jdbc:mysql://localhost:3306/collegestudentcall?characterEncoding=utf-8&useSSL=false&user=root&password=123456&serverTimezone=GMT&allowPublicKeyRetrieval=true
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml

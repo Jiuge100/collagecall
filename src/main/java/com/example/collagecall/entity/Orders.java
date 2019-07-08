@@ -4,7 +4,7 @@ import lombok.Data;
 @Data
 public class Orders {
 
-    int orderid;
+    String orderid;
     String openid;
     int total;//总件（份）数
     float sum;//总价

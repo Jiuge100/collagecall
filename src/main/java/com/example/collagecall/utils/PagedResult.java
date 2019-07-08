@@ -1,5 +1,7 @@
 package com.example.collagecall.utils;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+
 import java.util.List;
 
 /**
@@ -10,7 +12,7 @@ public class PagedResult {
 	private int page;			// 当前页数
 	private int total;			// 总页数	
 	private long records;		// 总记录数
-	private List<?> rows;		// 每行显示的内容
+	private IPage<?> rows;		// 每行显示的内容
 	
 	public int getPage() {
 		return page;
@@ -30,10 +32,10 @@ public class PagedResult {
 	public void setRecords(long records) {
 		this.records = records;
 	}
-	public List<?> getRows() {
+	public IPage<?> getRows() {
 		return rows;
 	}
-	public void setRows(List<?> rows) {
+	public void setRows(IPage<?> rows) {
 		this.rows = rows;
 	}
 

@@ -22,9 +22,9 @@ public class StudentController {
 //    }
 
     @GetMapping("/test")
-    public List<Student> test(){
+    public CollegeJSONResult test(){
         List<Student> studentList=studentDao.selectList(null);
-        return studentList;
+        return CollegeJSONResult.ok(studentList);
     }
 
 
