@@ -5,7 +5,6 @@ import com.example.collagecall.dao.GoodsDao;
 import com.example.collagecall.entity.Goods;
 import com.example.collagecall.service.GoodService;
 import com.example.collagecall.utils.CollegeJSONResult;
-import com.example.collagecall.utils.PagedResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

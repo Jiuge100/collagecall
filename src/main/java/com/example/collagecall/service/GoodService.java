@@ -2,7 +2,6 @@ package com.example.collagecall.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.example.collagecall.entity.Goods;
-import com.example.collagecall.utils.PagedResult;
 
 import java.util.List;
 
