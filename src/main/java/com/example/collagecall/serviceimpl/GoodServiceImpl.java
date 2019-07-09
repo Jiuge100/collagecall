@@ -43,11 +43,16 @@ public class GoodServiceImpl implements GoodService {
             seacherDao.insert(search);
         }
         QueryWrapper<Goods> queryWrapper=new QueryWrapper<>();
-        queryWrapper.like("name",name);
+        queryWrapper.like("name", name);
         Page<Goods> goodsPage=new Page<>(page,pagesize);
         IPage<Goods> goodsIPage=goodsDao.selectPage(goodsPage,queryWrapper);
 
         return goodsIPage;
+    }
+
+    @Override
+    public List<String> getseacherwords() {
+        return goodsDao.getseacherwords();
     }
 
     @Override

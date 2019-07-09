@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.example.collagecall.dao.SeacherDao" >
-  <resultMap id="BaseResultMap" type="com.example.collagecall.entity.Search" >
+<mapper namespace="com.example.collagecall.dao.GoodsDao" >
+  <resultMap id="BaseResultMap" type="com.example.collagecall.entity.Goods" >
     <!--
       WARNING - @mbg.generated
     -->
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="content" property="content" jdbcType="VARCHAR" />
   </resultMap>
-  
-  <select id="getHotwords" resultType="String">  
-  	select content from search group by content order by count(content) desc
+
+  <select id="getseacherwords" resultType="String" >
+    select distinct name
+    from goods
   </select>
 
   

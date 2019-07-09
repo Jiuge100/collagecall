@@ -20,4 +20,9 @@ public interface GoodService {
      * @Description: 获取热搜列表
      */
     public List<String> getHotwords();
+
+    /**
+     * @Description: 获取搜索匹配列表
+     */
+    public List<String> getseacherwords();
 }
