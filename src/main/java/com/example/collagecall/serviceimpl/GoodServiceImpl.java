@@ -24,7 +24,10 @@ public class GoodServiceImpl implements GoodService {
     @Autowired
     private Sid sid;
 
-
+    /**
+     * 增加商品
+     * @param goods
+     */
     @Override
     public void instergoods(Goods goods) {
         String id=sid.nextShort();
@@ -32,7 +35,15 @@ public class GoodServiceImpl implements GoodService {
         goodsDao.insert(goods);
     }
 
-
+    /**
+     * 分页显示商品
+     * @param goods
+     * @param issave
+     * @param page
+     * @param pagesize
+     * @return
+     */
+    @Override
     public IPage<Goods> getAllVideo(Goods goods,Integer issave,Integer page, Integer pagesize) {
         String name=goods.getName();
         if ((issave!=null&&issave==1)){
@@ -50,11 +61,19 @@ public class GoodServiceImpl implements GoodService {
         return goodsIPage;
     }
 
+    /**
+     * 得到所有商品名字
+     * @return
+     */
     @Override
     public List<String> getseacherwords() {
         return goodsDao.getseacherwords();
     }
 
+    /**
+     * 得到已经排好序的热搜商品名字
+     * @return
+     */
     @Override
     public List<String> getHotwords() {
         return seacherDao.getHotwords();

@@ -17,11 +17,23 @@ public class OrderController {
     @Autowired
     OrderDao orderDao;
 
+    /**
+     * 查询所有订单
+     * @return
+     */
     @GetMapping("/allorder")
     public CollegeJSONResult allorder(){
         List<Orders> list = orderDao.selectList(null);
         return CollegeJSONResult.ok(list);
     }
+
+    /**
+     * 添加订单
+     * @param openid
+     * @param total
+     * @param sum
+     * @param ordertime
+     */
     @GetMapping("/addorder")
     public void addorder(@RequestParam("openid") String openid,@RequestParam("total") int total,
                          @RequestParam("sum") float sum,@RequestParam("ordertime") String ordertime){

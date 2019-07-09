@@ -16,6 +16,6 @@ public class Goods {
     int stock;
     int number;
     String state;
-    String selecta;
+    String selected;
     int num;
 }

@@ -36,9 +36,22 @@ public class GoodsController {
         return CollegeJSONResult.ok(goodsIPage);
     }
 
+    /**
+     * 添加商品（暂时还少一个image）
+     * @param name
+     * @param introduce
+     * @param type
+     * @param price
+     * @param stock
+     * @param number
+     * @param state
+     * @param selected
+     * @param num
+     * @return
+     */
     @GetMapping("/insgoods")
     public CollegeJSONResult insgoods(String name, String introduce, String type,
-                                      float price, int stock, int number, String state, String selecta, int num){
+                                      float price, int stock, int number, String state, String selected, int num){
         Goods goods=new Goods();
         goods.setName(name);
         goods.setIntroduce(introduce);
@@ -48,7 +61,7 @@ public class GoodsController {
         goods.setNum(num);
         goods.setNumber(number);
         goods.setState(state);
-        goods.setSelecta(selecta);
+        goods.setSelected(selected);
         goodService.instergoods(goods);
         return CollegeJSONResult.ok(goods);
     }
