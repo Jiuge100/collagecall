@@ -3,8 +3,8 @@ package com.example.collagecall.entity;
 import lombok.Data;
 
 @Data
-/*
-将商品实例化
+/**
+ * 将商品实例化
  */
 public class Goods {
     String goodid;

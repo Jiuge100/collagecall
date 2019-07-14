@@ -12,6 +12,7 @@ import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Service
@@ -70,6 +71,7 @@ public class GoodServiceImpl implements GoodService {
         return goodsDao.getseacherwords();
     }
 
+
     /**
      * 得到已经排好序的热搜商品名字
      * @return
@@ -78,4 +80,17 @@ public class GoodServiceImpl implements GoodService {
     public List<String> getHotwords() {
         return seacherDao.getHotwords();
     }
+
+    /**
+     * 通过类型查查找商品
+     * @param type
+     * @return
+     */
+    @Override
+    public List<Goods> goodbytype(String type) {
+        HashMap<String,Object> map = new HashMap<String, Object>();
+        map.put("type",type);
+        return goodsDao.selectByMap(map);
+    }
+
 }

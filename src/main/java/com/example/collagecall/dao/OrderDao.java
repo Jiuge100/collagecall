@@ -6,4 +6,5 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface OrderDao extends BaseMapper<Orders> {
+    void updatestate(String openid, String orderid, String states);
 }

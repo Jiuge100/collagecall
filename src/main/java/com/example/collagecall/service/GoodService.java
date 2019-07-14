@@ -25,4 +25,10 @@ public interface GoodService {
      * @Description: 获取搜索匹配列表
      */
     public List<String> getseacherwords();
+
+    /**
+     * 通过类型查找商品
+     * @return
+     */
+    public List<Goods> goodbytype(String type);
 }

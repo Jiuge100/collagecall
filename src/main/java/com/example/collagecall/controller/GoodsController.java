@@ -99,4 +99,15 @@ public class GoodsController {
     public CollegeJSONResult seachname(){
         return CollegeJSONResult.ok(goodService.getseacherwords());
     }
+
+    /**
+     * 通过类型查找商品
+     * @param type
+     * @return
+     */
+    @GetMapping("/goodbytype")
+    public CollegeJSONResult goodbytype(String type){
+        return CollegeJSONResult.ok(goodService.goodbytype(type));
+    }
+
 }
